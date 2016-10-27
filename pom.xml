@@ -12,7 +12,7 @@
 	<packaging>pom</packaging>
 
 	<name>Vinz Tools</name>
-	<description>Various small tools.</description>
+	<description>Executable tools.</description>
 	<url>https://github.com/gv2011/util</url>
 
 	<licenses>
@@ -38,7 +38,8 @@
 	</scm>
 
 	<modules>
-		<module>var</module>
+    <module>var</module>
+    <module>rename</module>
 	</modules>
 
 </project>
