@@ -40,6 +40,7 @@
 	<modules>
     <module>var</module>
     <module>rename</module>
+    <module>hookforward</module>
 	</modules>
 
 </project>
