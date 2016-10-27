@@ -20,7 +20,7 @@ public class ToIso {
        + line.substring(0, 2) + "\n"
      );
     }
-    writeText(getPath("out.txt"), sb.toString());
+    writeText(sb.toString(), getPath("out.txt"));
   }
 
 }
