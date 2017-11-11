@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RescaleOp;
 import java.awt.image.WritableRaster;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ImageData {
 

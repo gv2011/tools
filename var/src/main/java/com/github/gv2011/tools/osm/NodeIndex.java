@@ -1,12 +1,6 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.FileUtils.getPath;
-import static com.github.gv2011.util.StringUtils.alignRight;
-import static com.github.gv2011.util.ex.Exceptions.notYetImplementedException;
-
 import java.nio.file.Path;
-
-import com.github.gv2011.util.FileUtils;
 
 public class NodeIndex {
 

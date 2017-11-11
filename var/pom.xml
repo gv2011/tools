@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.github.gv2011</groupId>
 		<artifactId>tools</artifactId>
-		<version>0.0.3-SNAPSHOT</version>
+		<version>0.0.5-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>tools-var</artifactId>
@@ -13,10 +13,14 @@
 	<description>Various small tools.</description>
 	
 	<dependencies>
-		<dependency>
-			<groupId>com.github.gv2011</groupId>
-			<artifactId>util</artifactId>
-		</dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>gcol</artifactId>      
+    </dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-compress</artifactId>
@@ -47,10 +51,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>com.sun.mail</groupId>
@@ -76,6 +79,12 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 		</dependency>
+    
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-test</artifactId>
+      <scope>test</scope>
+    </dependency>
 
 	</dependencies>
 

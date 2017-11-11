@@ -1,6 +1,6 @@
 package com.github.gv2011.tools.date;
 
-import static com.github.gv2011.util.FileUtils.getPath;
+import static com.github.gv2011.util.FileUtils.*;
 import static com.github.gv2011.util.FileUtils.readText;
 import static com.github.gv2011.util.FileUtils.writeText;
 import static com.github.gv2011.util.Verify.verify;
@@ -20,7 +20,7 @@ public class ToIso {
        + line.substring(0, 2) + "\n"
      );
     }
-    writeText(sb.toString(), getPath("out.txt"));
+    writeText(sb.toString(), path("out.txt"));
   }
 
 }

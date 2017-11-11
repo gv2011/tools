@@ -1,8 +1,5 @@
 package com.github.gv2011.tools.rename;
 
-
-
-
 import com.github.gv2011.tools.rename.gui.MainFrame;
 import static com.github.gv2011.util.StringUtils.removePrefix;
 import static com.github.gv2011.util.ex.Exceptions.call;
@@ -24,9 +21,7 @@ import java.util.function.Consumer;
 import javax.swing.TransferHandler;
 import javax.swing.table.DefaultTableModel;
 
-
 public class Main {
-
 
   public static void main(final String[] args) {
     EventQueue.invokeLater(() -> {

@@ -4,7 +4,6 @@ import static com.github.gv2011.util.ex.Exceptions.format;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.zip.GZIPInputStream;
 

@@ -1,6 +1,6 @@
 package com.github.gv2011.tools.accounting;
 
-import static com.github.gv2011.util.FileUtils.getPath;
+import static com.github.gv2011.util.FileUtils.*;
 import static com.github.gv2011.util.SetUtils.intersection;
 import static com.github.gv2011.util.SetUtils.unique;
 import static com.github.gv2011.util.Verify.verify;
@@ -30,6 +30,7 @@ import com.github.gv2011.tools.accounting.XlsUtils.XlsSheet;
 import com.github.gv2011.util.IsoDay;
 import com.github.gv2011.util.ann.Nullable;
 
+@SuppressWarnings("deprecation")//TODO
 public class CheckAccounting {
 
   public static void main(final String[] args){
@@ -58,7 +59,7 @@ public class CheckAccounting {
     final SortedMap<String, SortedMap<String, Object>> bankEntries = new ReadBank().read();
     final BankingCheck bankingCheck = new BankingCheck(new BigDecimal("31810.72"), bankEntries);
     final SortedSet<String> mappedBankEntries = new TreeSet<>();
-    try(XlsSheet xs = XlsUtils.open(getPath("data", "EÜR.xls"), getPath("data","EÜR-mod.xls"))){
+    try(XlsSheet xs = XlsUtils.open(path("data", "EÜR.xls"), path("data","EÜR-mod.xls"))){
       final HSSFSheet sheet = xs.get();
       table = new CheckAccounting().readAccounting(xs);
       final Set<DayAndAmount> uniqueDams = getUniqueDams(bankEntries.values(), table.values());
@@ -190,7 +191,7 @@ public class CheckAccounting {
   private static void writeMissingBankEntries(final SortedMap<String, SortedMap<String, Object>> bankEntries,
       final SortedSet<String> mappedBankEntries) {
     final AtomicInteger row = new AtomicInteger(0);
-    try(XlsSheet xs = XlsUtils.createEmpty(getPath("data", "bank-missing.xls"))){
+    try(XlsSheet xs = XlsUtils.createEmpty(path("data", "bank-missing.xls"))){
       //final BigDecimal limit = BigDecimal.valueOf(1000L);
       bankEntries.entrySet().stream()
         .filter(e->!mappedBankEntries.contains(e.getKey()))

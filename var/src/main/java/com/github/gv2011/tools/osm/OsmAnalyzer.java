@@ -1,6 +1,7 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.FileUtils.getPath;
+import static com.github.gv2011.util.CollectionUtils.pair;
+import static com.github.gv2011.util.FileUtils.*;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.run;
@@ -42,7 +43,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
     try(OsmAnalyzer osmAnalyzer = new OsmAnalyzer()){
       osmAnalyzer.analyze(
   //        getPath("/work/germany-latest.osm.bz2")
-          getPath("/work/berlin-latest.osm.bz2")
+          path("/work/berlin-latest.osm.bz2")
         .toUri().toURL()
       );
     }
@@ -53,7 +54,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
 //  private Counter<String> attNames;
 //  private Counter<String> tags;
 //  private Counter<Set<String>> tagGroups;
-  private final Path data = getPath("osm");
+  private final Path data = path("osm");
 
   private int count;
   private final int limit = Integer.MAX_VALUE-1000;
@@ -163,6 +164,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
 //    }
 //  }
 
+  @SuppressWarnings("unused")//TODO
   private void readNode(final XMLEventReader sr) throws XMLStreamException, IOException {
     final StartElement node = ((StartElement)sr.peek());
     final long id = Long.parseLong(node.getAttributeByName(ID).getValue());
@@ -223,7 +225,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
     while(!sr.nextEvent().isEndElement()){
       verify(!sr.peek().isStartElement());
     }
-    return new Pair<>(key,value);
+    return pair(key,value);
   }
 
 }

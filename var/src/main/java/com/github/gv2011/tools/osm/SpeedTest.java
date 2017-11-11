@@ -1,6 +1,6 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.FileUtils.getPath;
+import static com.github.gv2011.util.FileUtils.path;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.format;
@@ -8,7 +8,6 @@ import static com.github.gv2011.util.ex.Exceptions.run;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.HashMap;
@@ -40,7 +39,7 @@ public class SpeedTest implements AutoCloseableNt{
   //        getPath("/work/germany-latest.osm.bz2")
         ()->call(()->
         new BZip2CompressorInputStream(
-          getPath(
+          path(
             "/work/germany-latest.osm.bz2"
 //              "E:/europe-161001.osm.bz2"
 //              "/work/berlin-latest.osm"
@@ -193,6 +192,7 @@ public class SpeedTest implements AutoCloseableNt{
   @Override
   public void close() {}
 
+  @SuppressWarnings("unused")//TODO
   private void doNothing(final InputStream is) throws IOException {
     final byte[] buffer = new byte[256];
     int count = 0;
@@ -201,6 +201,7 @@ public class SpeedTest implements AutoCloseableNt{
     }
   }
 
+  @SuppressWarnings("unused")//TODO
   private void parseXml(final InputStream is) throws Exception {
     final XMLEventReader eventReader = XMLInputFactory.newInstance().createXMLEventReader(is);
     eventReader.nextTag();
@@ -209,6 +210,7 @@ public class SpeedTest implements AutoCloseableNt{
     }
   }
 
+  @SuppressWarnings("unused")//TODO
   private void parseXml2(final InputStream is, final AtomicLong counter) throws Exception {
     //    1100983095 bytes read.
     //    15520482 tags read.

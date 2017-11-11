@@ -1,6 +1,6 @@
 package com.github.gv2011.tools.accounting;
 
-import static com.github.gv2011.util.FileUtils.getPath;
+import static com.github.gv2011.util.FileUtils.*;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -27,7 +27,7 @@ public class ReadBank {
   }
 
   public SortedMap<String, SortedMap<String,Object>> read(){
-    try(XlsSheet xs = XlsUtils.read(getPath("data","bank.xls"))){
+    try(XlsSheet xs = XlsUtils.read(path("data","bank.xls"))){
       final HSSFSheet sheet = xs.get();
       final int rows = sheet.getPhysicalNumberOfRows();
       final SortedMap<String, SortedMap<String,Object>> entries = new TreeMap<>();

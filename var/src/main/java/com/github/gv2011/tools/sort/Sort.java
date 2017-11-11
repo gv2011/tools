@@ -1,12 +1,10 @@
 package com.github.gv2011.tools.sort;
 
-import static com.github.gv2011.util.StringUtils.readFile;
+import static com.github.gv2011.util.FileUtils.readText;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import java.util.SortedMap;
-import java.util.SortedSet;
 import java.util.TreeMap;
-import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -23,7 +21,7 @@ public class Sort {
 
   public static void main(final String[] args) {
     System.out.println(REGEX);
-    final String txt = readFile("in.txt");
+    final String txt = readText("in.txt");
     final Pattern p = Pattern.compile(STRING);
     final Matcher m = p.matcher(txt);
     final SortedMap<String,String> sorted = new TreeMap<>();

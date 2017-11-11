@@ -1,6 +1,5 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.run;
 
 import java.awt.BorderLayout;
@@ -10,10 +9,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Graphics;
-import java.awt.MenuBar;
 import java.awt.event.ActionEvent;
-import java.awt.image.BufferedImage;
-import java.awt.image.WritableRaster;
 import java.io.File;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -29,8 +25,6 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 
-import com.github.gv2011.util.Pair;
-
 public class Display {
 
 
@@ -43,6 +37,7 @@ public class Display {
 
   private final ImageData points;
 //  private final List<Pair<Float,Float>> newPoints = new ArrayList<>();
+  @SuppressWarnings("unused")//TODO
   private final AtomicLong noPoints = new AtomicLong();
 
 

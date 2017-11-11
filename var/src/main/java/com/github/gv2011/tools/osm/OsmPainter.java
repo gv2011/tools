@@ -1,16 +1,14 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.FileUtils.getPath;
+import static com.github.gv2011.util.CollectionUtils.pair;
+import static com.github.gv2011.util.FileUtils.path;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.run;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-import java.awt.EventQueue;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -23,12 +21,9 @@ import java.util.TreeSet;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
-import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.StartElement;
-
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
 import com.github.gv2011.util.AutoCloseableNt;
 import com.github.gv2011.util.Pair;
@@ -55,7 +50,7 @@ public class OsmPainter implements AutoCloseableNt{
 //  private Counter<String> attNames;
 //  private Counter<String> tags;
 //  private Counter<Set<String>> tagGroups;
-  private final Path data = getPath("osm");
+  private final Path data = path("osm");
 
   private int count;
   private final int limit = 1000000;
@@ -84,6 +79,7 @@ public class OsmPainter implements AutoCloseableNt{
 //    });
 //  }
 
+  @SuppressWarnings("unused")//TODO
   private void handleEvent(final XMLEventReader eventReader){
     if(call(()->eventReader.peek()).isStartElement()) {
       handleElement(eventReader, Optional.empty());
@@ -192,6 +188,7 @@ public class OsmPainter implements AutoCloseableNt{
 //    }
 //  }
 
+  @SuppressWarnings("unused")//TODO
   private void readNode(final XMLEventReader sr) throws XMLStreamException, IOException {
     final StartElement node = ((StartElement)sr.peek());
     final long id = Long.parseLong(node.getAttributeByName(ID).getValue());
@@ -252,7 +249,7 @@ public class OsmPainter implements AutoCloseableNt{
     while(!sr.nextEvent().isEndElement()){
       verify(!sr.peek().isStartElement());
     }
-    return new Pair<>(key,value);
+    return pair(key,value);
   }
 
 }

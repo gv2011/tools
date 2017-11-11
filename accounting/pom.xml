@@ -8,10 +8,9 @@
 		<version>0.0.5-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tool-hook</artifactId>
-	<packaging>war</packaging>
+	<artifactId>tools-accounting</artifactId>
 
-	<description>Forward github hook requests to a different service</description>
+	<description>Accounting Helper</description>
 
 	<dependencies>
 		<dependency>
@@ -19,17 +18,21 @@
 			<artifactId>util</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
+			<groupId>com.github.gv2011</groupId>
+			<artifactId>gcol</artifactId>
+			<scope>runtime</scope>
 		</dependency>
+
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-test</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+    </dependency>
+    
 	</dependencies>
-<!-- 	<build> -->
-<!-- 		<plugins> -->
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.mortbay.jetty</groupId> -->
-<!-- 				<artifactId>maven-jetty-plugin</artifactId> -->
-<!-- 			</plugin> -->
-<!-- 		</plugins> -->
-<!-- 	</build> -->
+
 </project>

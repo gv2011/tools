@@ -35,6 +35,7 @@ import org.apache.poi.ss.util.WorkbookUtil;
 import com.github.gv2011.util.AutoCloseableNt;
 import com.github.gv2011.util.IsoDay;
 
+@SuppressWarnings("deprecation")//TODO
 public class ConvertBank implements AutoCloseableNt{
 
   public static void main(final String[] args) throws IOException {
