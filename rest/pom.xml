@@ -8,9 +8,9 @@
     <version>0.0.5-SNAPSHOT</version>
   </parent>
 
-  <artifactId>tools-accounting</artifactId>
+  <artifactId>tools-rest</artifactId>
 
-  <description>Accounting Helper</description>
+  <description>Tool to access REST resources</description>
 
   <dependencies>
     <dependency>
@@ -20,22 +20,26 @@
     </dependency>
     <dependency>
       <groupId>com.github.gv2011</groupId>
-      <artifactId>gcol</artifactId>
+      <artifactId>http</artifactId>
       <version>${utils.version}</version>
-      <scope>runtime</scope>
     </dependency>
-
     <dependency>
       <groupId>com.github.gv2011</groupId>
-      <artifactId>util-test</artifactId>
+      <artifactId>gcol</artifactId>
+      <scope>runtime</scope>
       <version>${utils.version}</version>
     </dependency>
-
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-csv</artifactId>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>jsong</artifactId>
+      <scope>runtime</scope>
+      <version>${utils.version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
 
 </project>
