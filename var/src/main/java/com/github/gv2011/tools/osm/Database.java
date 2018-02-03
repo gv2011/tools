@@ -2,7 +2,6 @@ package com.github.gv2011.tools.osm;
 
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.format;
-import static com.github.gv2011.util.ex.Exceptions.run;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -51,11 +50,11 @@ public class Database implements AutoCloseableNt{
 
   @Override
   public void close(){
-    run(()->cn.close());
+    call(()->cn.close());
   }
 
   public void addTag(final Tag tag){
-    run(()->{
+    call(()->{
       try(Statement st = cn.createStatement()){
         final Element parent = tag.parent().get();
         st.execute(

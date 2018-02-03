@@ -50,7 +50,7 @@ public class MainFrame extends javax.swing.JFrame {
                 "Current Name", "New Name"
             }
         ) {
-            Class[] types = new Class [] {
+            Class<?>[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
@@ -58,7 +58,7 @@ public class MainFrame extends javax.swing.JFrame {
             };
 
             @Override
-            public Class getColumnClass(final int columnIndex) {
+            public Class<?> getColumnClass(final int columnIndex) {
                 return types [columnIndex];
             }
 

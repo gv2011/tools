@@ -16,24 +16,24 @@
     <dependency>
       <groupId>com.github.gv2011</groupId>
       <artifactId>util</artifactId>
-      <version>${utils.version}</version>
+      <version>${util.version}</version>
     </dependency>
     <dependency>
       <groupId>com.github.gv2011</groupId>
       <artifactId>http</artifactId>
-      <version>${utils.version}</version>
+      <version>${util.version}</version>
     </dependency>
     <dependency>
       <groupId>com.github.gv2011</groupId>
       <artifactId>gcol</artifactId>
       <scope>runtime</scope>
-      <version>${utils.version}</version>
+      <version>${util.version}</version>
     </dependency>
     <dependency>
       <groupId>com.github.gv2011</groupId>
       <artifactId>jsong</artifactId>
       <scope>runtime</scope>
-      <version>${utils.version}</version>
+      <version>${util.version}</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>

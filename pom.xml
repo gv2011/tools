@@ -1,28 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
-    <groupId>com.github.gv2011</groupId>
     <artifactId>parent-gv</artifactId>
-    <version>0.2.0</version>
+    <groupId>com.github.gv2011</groupId>
+    <version>0.2.1-SNAPSHOT</version>
   </parent>
-
   <artifactId>tools</artifactId>
   <version>0.0.5-SNAPSHOT</version>
   <packaging>pom</packaging>
-
   <name>Vinz Tools</name>
   <description>Executable tools.</description>
   <url>https://github.com/gv2011/util</url>
-
   <licenses>
     <license>
       <name>MIT License</name>
       <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
-
   <developers>
     <developer>
       <id>gv2011</id>
@@ -30,14 +26,11 @@
       <url>https://github.com/gv2011</url>
     </developer>
   </developers>
-
   <scm>
     <connection>scm:git:git@github.com:gv2011/util.git</connection>
     <developerConnection>scm:git:git@github.com:gv2011/util.git</developerConnection>
     <url>https://github.com/gv2011/util</url>
-    <tag>HEAD</tag>
   </scm>
-
   <modules>
     <module>accounting</module>
     <module>var</module>
@@ -45,9 +38,7 @@
     <module>hookforward</module>
     <module>rest</module>
   </modules>
-  
   <properties>
-    <utils.version>0.2.1</utils.version>
+    <util.version>0.2.2-SNAPSHOT</util.version>
   </properties>
-
 </project>

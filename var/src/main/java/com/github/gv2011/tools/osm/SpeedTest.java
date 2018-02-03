@@ -4,7 +4,6 @@ import static com.github.gv2011.util.FileUtils.path;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.format;
-import static com.github.gv2011.util.ex.Exceptions.run;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -63,7 +62,7 @@ public class SpeedTest implements AutoCloseableNt{
   private Display display;
 
   public void analyze(final Supplier<InputStream> in){
-    run(()->{
+    call(()->{
       final Instant start = Instant.now();
       final Instant limit = start.plus(Duration.ofDays(1));
       final AtomicLong counter = new AtomicLong();

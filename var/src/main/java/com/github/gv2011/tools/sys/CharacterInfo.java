@@ -34,6 +34,7 @@ public class CharacterInfo {
     for(int cp=0; cp<256; cp++){
       final UChar c = UChar.uChar(cp);
       final String display = display(c);
+      @SuppressWarnings("unused")
       final String cInfo = format("{}: {} {} ({})", cp, display, c.name(), c.type());
       //System.out.println(cInfo);
     }

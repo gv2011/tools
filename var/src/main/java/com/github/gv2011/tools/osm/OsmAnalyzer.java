@@ -1,10 +1,9 @@
 package com.github.gv2011.tools.osm;
 
 import static com.github.gv2011.util.CollectionUtils.pair;
-import static com.github.gv2011.util.FileUtils.*;
+import static com.github.gv2011.util.FileUtils.path;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
-import static com.github.gv2011.util.ex.Exceptions.run;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.IOException;
@@ -67,7 +66,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
   }
 
   public void analyze(final URL url){
-    run(()->{
+    call(()->{
       try(InputStream is =
         call(()->new BZip2CompressorInputStream(url.openStream()))
       ){
@@ -103,7 +102,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
   }
 
   private void next(final XMLEventReader eventReader) {
-    run(()->eventReader.nextEvent());
+    call(eventReader::nextEvent);
     System.out.println(count++);
   }
 

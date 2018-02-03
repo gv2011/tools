@@ -1,6 +1,6 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.ex.Exceptions.run;
+import static com.github.gv2011.util.ex.Exceptions.call;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -91,7 +91,7 @@ public class Display {
   }
 
   private void save(final ActionEvent e) {
-    run(()->ImageIO.write(points.getImage(), "png", new File("osm.png")));
+    call(()->ImageIO.write(points.getImage(), "png", new File("osm.png")));
   }
 
   public void node(final double lon, final double lat) {

@@ -1,7 +1,7 @@
 package com.github.gv2011.tools.osm;
 
+import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.format;
-import static com.github.gv2011.util.ex.Exceptions.run;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.nio.file.Files;
@@ -34,7 +34,7 @@ public class Counter<T> {
       final String elementStr = element.toString();
       System.out.println(format("New {}: {}", name, elementStr));
       if(file.isPresent()){
-        run(()->Files.write(
+        call(()->Files.write(
           file.get(),
           (elementStr+'\n').getBytes(UTF_8),
           StandardOpenOption.APPEND, StandardOpenOption.CREATE

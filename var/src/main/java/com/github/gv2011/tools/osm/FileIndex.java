@@ -1,8 +1,9 @@
 package com.github.gv2011.tools.osm;
 
+import static com.github.gv2011.util.FileUtils.delete;
 import static com.github.gv2011.util.FileUtils.tryReadText;
 import static com.github.gv2011.util.FileUtils.writeText;
-import static com.github.gv2011.util.ex.Exceptions.run;
+import static com.github.gv2011.util.ex.Exceptions.call;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,7 +19,7 @@ public class FileIndex {
 
   private static final int LEVELS = 3;
   private final Object lock = new Object();
-  private final Set<Path> fileLocks = new HashSet<Path>();
+  private final Set<Path> fileLocks = new HashSet<>();
   private final Path baseDir;
 
 
@@ -31,7 +32,7 @@ public class FileIndex {
     final Path path = getPath(hash);
     try(AutoCloseableNt lock = getLock(path)){
       final Optional<String> result = tryReadText(path);
-      run(()->Files.createDirectories(path.getParent()));
+      call(()->Files.createDirectories(path.getParent()));
       writeText(value, path);
       return result;
     }
@@ -51,14 +52,14 @@ public class FileIndex {
     final Path path = getPath(hash);
     try(AutoCloseableNt lock = getLock(path)){
       final Optional<String> result = tryReadText(path);
-      if(result.isPresent()) run(()->Files.delete(path));
+      if(result.isPresent()) delete(path);
       return result;
     }
   }
 
   private AutoCloseableNt getLock(final Path path) {
     synchronized(lock){
-      while(fileLocks.contains(path)) run(()->lock.wait());
+      while(fileLocks.contains(path)) call(()->lock.wait());
       fileLocks.add(path);
     }
     return ()->{

@@ -25,7 +25,7 @@ public class Main {
 
   public static void main(final String[] args) {
     EventQueue.invokeLater(() -> {
-      final Main controller = createController();
+      createController();
     });
   }
 
@@ -44,7 +44,6 @@ public class Main {
   }
 
   private final MainFrame gui;
-  private final Optional<File> dir = Optional.empty();
   private final DefaultTableModel tableModel =
     new DefaultTableModel(new Object[]{"Current Name", "New Name"},0)
   ;
@@ -160,6 +159,7 @@ public class Main {
     }
   }
 
+  @SuppressWarnings("unused")
   private static class Dtl implements DropTargetListener {
     private final Consumer<DropTargetDropEvent> listener;
     public Dtl(final Consumer<DropTargetDropEvent> listener) {
