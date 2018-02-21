@@ -4,9 +4,9 @@ import static com.github.gv2011.util.Verify.verifyEqual;
 
 import java.math.BigDecimal;
 
-import com.github.gv2011.util.tstr.TypedString;
+import com.github.gv2011.util.tstr.AbstractTypedString;
 
-public class Amount extends TypedString<Amount>{
+public class Amount extends AbstractTypedString<Amount>{
 
 
   public static final Amount ZERO = new Amount(0);
@@ -37,17 +37,19 @@ public class Amount extends TypedString<Amount>{
   }
 
   @Override
-  protected int compareWithOtherOfSameType(final Amount o) {
+  public int compareWithOtherOfSameType(final Amount o) {
     return Long.compare(cents, o.cents);
   }
 
+
+
   @Override
-  protected Amount self() {
+  public Amount self() {
     return this;
   }
 
   @Override
-  protected Class<Amount> clazz() {
+  public Class<Amount> clazz() {
     return Amount.class;
   }
 
