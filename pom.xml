@@ -39,6 +39,6 @@
     <module>rest</module>
   </modules>
   <properties>
-    <util.version>0.3.2-SNAPSHOT</util.version>
+    <util.version>0.3.5-SNAPSHOT</util.version>
   </properties>
 </project>
