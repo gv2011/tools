@@ -2,7 +2,7 @@ package com.github.gv2011.accounting;
 
 import java.util.Optional;
 
-import com.github.gv2011.util.IsoDay;
+import com.github.gv2011.util.time.IsoDay;
 
 public class AccountingEntry {
 
