@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import com.github.gv2011.util.CharacterType;
-import com.github.gv2011.util.UChar;
+import com.github.gv2011.util.uc.UChar;
 
 public class CharacterInfo {
 
