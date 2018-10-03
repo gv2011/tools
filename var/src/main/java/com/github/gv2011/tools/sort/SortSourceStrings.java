@@ -1,6 +1,6 @@
 package com.github.gv2011.tools.sort;
 
-import static com.github.gv2011.util.CollectionUtils.sortedSetOf;
+import static com.github.gv2011.util.icol.ICollections.sortedSetOf;
 import static java.util.stream.Collectors.joining;
 
 public class SortSourceStrings {
