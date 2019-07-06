@@ -1,7 +1,8 @@
 package com.github.gv2011.accounting2;
 
+import java.time.LocalDate;
+
 import com.github.gv2011.util.icol.Opt;
-import com.github.gv2011.util.time.IsoDay;
 
 public interface AccountingEntry {
 
@@ -17,6 +18,6 @@ public interface AccountingEntry {
 
   Opt<AccountingEntry> entryBefore();
 
-  IsoDay date();
+  LocalDate date();
 
 }

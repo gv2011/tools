@@ -5,6 +5,7 @@ import static com.github.gv2011.util.FileUtils.readText;
 import static com.github.gv2011.util.FileUtils.writeText;
 import static com.github.gv2011.util.Verify.verify;
 
+import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 public class ToIso {
@@ -20,7 +21,7 @@ public class ToIso {
        + line.substring(0, 2) + "\n"
      );
     }
-    writeText(sb.toString(), path("out.txt"));
+    writeText(sb.toString(), Paths.get("out.txt"));
   }
 
 }

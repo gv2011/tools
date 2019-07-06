@@ -47,15 +47,10 @@
 			<artifactId>httpclient</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>imap</artifactId>
-		</dependency>
+    <dependency>
+      <groupId>jakarta.mail</groupId>
+      <artifactId>jakarta.mail-api</artifactId>
+    </dependency>
 
 		<dependency>
 			<groupId>com.github.lookfirst</groupId>
@@ -79,7 +74,7 @@
     
     <dependency>
       <groupId>com.github.gv2011</groupId>
-      <artifactId>util-test</artifactId>
+      <artifactId>testutil</artifactId>
       <version>${util.version}</version>
       <scope>test</scope>
     </dependency>

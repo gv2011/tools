@@ -1,12 +1,12 @@
 package com.github.gv2011.tools.osm;
 
-import static com.github.gv2011.util.FileUtils.path;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static com.github.gv2011.util.ex.Exceptions.format;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.HashMap;
@@ -38,7 +38,7 @@ public class SpeedTest implements AutoCloseableNt{
   //        getPath("/work/germany-latest.osm.bz2")
         ()->call(()->
         new BZip2CompressorInputStream(
-          path(
+          Paths.get(
             "/work/germany-latest.osm.bz2"
 //              "E:/europe-161001.osm.bz2"
 //              "/work/berlin-latest.osm"

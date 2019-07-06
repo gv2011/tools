@@ -5,7 +5,7 @@
   <parent>
     <artifactId>parent-gv</artifactId>
     <groupId>com.github.gv2011</groupId>
-    <version>0.3.1-SNAPSHOT</version>
+    <version>0.4.1-SNAPSHOT</version>
   </parent>
   <artifactId>tools</artifactId>
   <version>0.0.5-SNAPSHOT</version>
@@ -39,6 +39,6 @@
     <module>rest</module>
   </modules>
   <properties>
-    <util.version>0.3.11-SNAPSHOT</util.version>
+    <util.version>0.4.1-SNAPSHOT</util.version>
   </properties>
 </project>

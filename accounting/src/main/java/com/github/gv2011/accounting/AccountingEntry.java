@@ -1,20 +1,19 @@
 package com.github.gv2011.accounting;
 
+import java.time.LocalDate;
 import java.util.Optional;
-
-import com.github.gv2011.util.time.IsoDay;
 
 public class AccountingEntry {
 
   private final Amount amount;
   private final Amount balance;
   private final Optional<AccountingEntry> nextEntry;
-  private final IsoDay date;
+  private final LocalDate date;
   private final String opposite;
   private final String message;
 
   public AccountingEntry(
-    final IsoDay date,
+    final LocalDate date,
     final Amount amount,
     final Amount balance,
     final Optional<AccountingEntry> nextEntry, final String opposite, final String message
@@ -51,7 +50,7 @@ public class AccountingEntry {
     return nextEntry;
   }
 
-  public IsoDay date() {
+  public LocalDate date() {
     return date;
   }
 
