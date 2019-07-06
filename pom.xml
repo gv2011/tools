@@ -33,6 +33,7 @@
   </scm>
   <modules>
     <module>accounting</module>
+    <module>m2t</module>
     <module>var</module>
     <module>rename</module>
     <module>hookforward</module>
