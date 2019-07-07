@@ -17,7 +17,6 @@
   <modules>
     <module>api</module>
     <module>imp</module>
-    <module>test</module>
   </modules>
 
 </project>

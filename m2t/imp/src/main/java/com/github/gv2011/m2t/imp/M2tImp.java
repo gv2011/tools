@@ -171,4 +171,7 @@ final class M2tImp implements M2t{
     return dir;
   }
 
+  @Override
+  public void close() {}
+
 }
