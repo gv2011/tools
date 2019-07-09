@@ -12,6 +12,7 @@
       <groupId>{}</groupId>
       <artifactId>{}</artifactId>
       <version>{}</version>
+      <type>{}</type>{}
     </dependency>
   </dependencies>
 
