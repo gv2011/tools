@@ -5,10 +5,10 @@
   <parent>
     <artifactId>parent-gv</artifactId>
     <groupId>com.github.gv2011</groupId>
-    <version>0.4.1-SNAPSHOT</version>
+    <version>0.5.0</version>
   </parent>
   <artifactId>tools</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.5.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Vinz Tools</name>
   <description>Executable tools.</description>
@@ -40,6 +40,6 @@
     <module>rest</module>
   </modules>
   <properties>
-    <util.version>0.4.1-SNAPSHOT</util.version>
+    <util.version>0.5.0-SNAPSHOT</util.version>
   </properties>
 </project>
