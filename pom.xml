@@ -22,17 +22,18 @@
       <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
+  <inceptionYear>2015</inceptionYear>
   <developers>
     <developer>
       <id>gv2011</id>
-      <name>Copyright (C) 2016 Vinz (https://github.com/gv2011)</name>
+      <name>Vinz</name>
       <url>https://github.com/gv2011</url>
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:gv2011/util.git</connection>
-    <developerConnection>scm:git:git@github.com:gv2011/util.git</developerConnection>
-    <url>https://github.com/gv2011/util</url>
+    <connection>scm:git:git@github.com:gv2011/tools.git</connection>
+    <developerConnection>scm:git:git@github.com:gv2011/tools.git</developerConnection>
+    <url>https://github.com/gv2011/tools</url>
   </scm>
   <modules>
     <module>accounting</module>
