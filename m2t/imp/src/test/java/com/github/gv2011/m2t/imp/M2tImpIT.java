@@ -15,7 +15,7 @@ import com.github.gv2011.m2t.Type;
 import com.github.gv2011.testutil.AbstractTest;
 import com.github.gv2011.util.BeanUtils;
 
-public class M2tImpTest extends AbstractTest{
+public class M2tImpIT extends AbstractTest{
 
   @Test
   public void testResolve() {
@@ -69,13 +69,6 @@ public class M2tImpTest extends AbstractTest{
       .build()
     ;
     return artifact;
-  }
-
-
-
-  @Test
-  public void testEnv() {
-    System.getenv().entrySet().forEach(System.out::println);
   }
 
 }
