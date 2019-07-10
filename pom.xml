@@ -13,6 +13,9 @@
   <name>Vinz Tools</name>
   <description>Executable tools.</description>
   <url>https://github.com/gv2011/util</url>
+  <properties>
+    <util.version>0.5.0</util.version>
+  </properties>
   <licenses>
     <license>
       <name>MIT License</name>
@@ -39,7 +42,4 @@
     <module>hookforward</module>
     <module>rest</module>
   </modules>
-  <properties>
-    <util.version>0.5.0</util.version>
-  </properties>
 </project>
