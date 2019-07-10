@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>parent-gv</artifactId>
     <groupId>com.github.gv2011</groupId>
-    <version>0.3.0</version>
+    <version>0.5.0</version>
   </parent>
   <artifactId>tools</artifactId>
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.5.0</version>
   <packaging>pom</packaging>
   <name>Vinz Tools</name>
   <description>Executable tools.</description>
   <url>https://github.com/gv2011/util</url>
+  <properties>
+    <util.version>0.5.0</util.version>
+  </properties>
   <licenses>
     <license>
       <name>MIT License</name>
       <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
+  <inceptionYear>2015</inceptionYear>
   <developers>
     <developer>
       <id>gv2011</id>
-      <name>Copyright (C) 2016 Vinz (https://github.com/gv2011)</name>
+      <name>Vinz</name>
       <url>https://github.com/gv2011</url>
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:gv2011/util.git</connection>
-    <developerConnection>scm:git:git@github.com:gv2011/util.git</developerConnection>
-    <url>https://github.com/gv2011/util</url>
+    <connection>scm:git:git@github.com:gv2011/tools.git</connection>
+    <developerConnection>scm:git:git@github.com:gv2011/tools.git</developerConnection>
+    <url>https://github.com/gv2011/tools</url>
+    <tag>tools-0.5.0</tag>
   </scm>
   <modules>
     <module>accounting</module>
+    <module>m2t</module>
     <module>var</module>
     <module>rename</module>
     <module>hookforward</module>
     <module>rest</module>
   </modules>
-  <properties>
-    <util.version>0.3.4</util.version>
-  </properties>
 </project>

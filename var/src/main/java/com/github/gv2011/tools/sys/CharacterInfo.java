@@ -1,7 +1,8 @@
 package com.github.gv2011.tools.sys;
 
-import static com.github.gv2011.util.CollectionUtils.toISortedSet;
 import static com.github.gv2011.util.ex.Exceptions.format;
+import static com.github.gv2011.util.icol.ICollections.toISortedSet;
+import static com.github.gv2011.util.uc.UChars.uChar;
 import static java.util.stream.Collectors.joining;
 
 import java.nio.charset.Charset;
@@ -10,7 +11,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import com.github.gv2011.util.CharacterType;
-import com.github.gv2011.util.UChar;
+import com.github.gv2011.util.uc.UChar;
+import com.github.gv2011.util.uc.UChars;
 
 public class CharacterInfo {
 
@@ -20,7 +22,7 @@ public class CharacterInfo {
       final Charset cs = Charset.forName("ISO-8859-"+i);
       for(int j=0; j<256; j++){
         final String ch = new String(new byte[]{(byte)j}, cs);
-        final UChar c = UChar.uChar(ch);
+        final UChar c = uChar(ch);
         final int cp = c.codePoint();
         if(cp!=j && cp>=256 && !c.equals(UChar.REPLACEMENT_CHARACTER)){
           System.out.println(format(
@@ -32,14 +34,14 @@ public class CharacterInfo {
     }
 
     for(int cp=0; cp<256; cp++){
-      final UChar c = UChar.uChar(cp);
+      final UChar c = uChar(cp);
       final String display = display(c);
       @SuppressWarnings("unused")
       final String cInfo = format("{}: {} {} ({})", cp, display, c.name(), c.type());
       //System.out.println(cInfo);
     }
     final String byType = IntStream.range(0,128)
-      .mapToObj(UChar::uChar)
+      .mapToObj(UChars::uChar)
       .collect(Collectors.groupingBy(
         c->c.type(),
         TreeMap::new,

@@ -1,7 +1,7 @@
 package com.github.gv2011.tools.osm;
 
+import static com.github.gv2011.testutil.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
 
 import java.nio.file.FileSystems;
 import java.nio.file.Path;

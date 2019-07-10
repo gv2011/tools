@@ -1,7 +1,6 @@
 package com.github.gv2011.tools.osm;
 
 import static com.github.gv2011.util.CollectionUtils.pair;
-import static com.github.gv2011.util.FileUtils.path;
 import static com.github.gv2011.util.Verify.verify;
 import static com.github.gv2011.util.ex.Exceptions.call;
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -10,6 +9,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Iterator;
 import java.util.Map;
@@ -49,7 +49,7 @@ public class OsmPainter implements AutoCloseableNt{
 //  private Counter<String> attNames;
 //  private Counter<String> tags;
 //  private Counter<Set<String>> tagGroups;
-  private final Path data = path("osm");
+  private final Path data = Paths.get("osm");
 
   private int count;
   private final int limit = 1000000;
