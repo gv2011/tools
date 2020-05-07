@@ -9,7 +9,7 @@
         <version>0.5.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>git-tools</artifactId>
+    <artifactId>tools-git</artifactId>
 
 	<dependencies>
 		<dependency>

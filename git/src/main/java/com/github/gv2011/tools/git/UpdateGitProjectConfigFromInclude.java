@@ -1,4 +1,4 @@
-package com.github.gv2011.gittools;
+package com.github.gv2011.tools.git;
 
 import static com.github.gv2011.util.Verify.notNull;
 import static com.github.gv2011.util.ex.Exceptions.call;

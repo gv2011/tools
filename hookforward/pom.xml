@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -7,7 +9,7 @@
 		<version>0.5.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tool-hook</artifactId>
+	<artifactId>tools-hook</artifactId>
 	<packaging>war</packaging>
 
 	<description>Forward github hook requests to a different service</description>
@@ -16,7 +18,7 @@
 		<dependency>
 			<groupId>com.github.gv2011</groupId>
 			<artifactId>util</artifactId>
-      <version>${util.version}</version>
+			<version>${util.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -24,12 +26,12 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-<!-- 	<build> -->
-<!-- 		<plugins> -->
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.mortbay.jetty</groupId> -->
-<!-- 				<artifactId>maven-jetty-plugin</artifactId> -->
-<!-- 			</plugin> -->
-<!-- 		</plugins> -->
-<!-- 	</build> -->
+	<!-- <build> -->
+	<!-- <plugins> -->
+	<!-- <plugin> -->
+	<!-- <groupId>org.mortbay.jetty</groupId> -->
+	<!-- <artifactId>maven-jetty-plugin</artifactId> -->
+	<!-- </plugin> -->
+	<!-- </plugins> -->
+	<!-- </build> -->
 </project>
