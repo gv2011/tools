@@ -30,7 +30,7 @@ public class Sort {
       final String rawStr = m.group(1);
       final String str = rawStr.replace("\\\"", "\"").replace("\\\\", "\\");
       sorted.put(str, rawStr);
-    };
+    }
     System.out.println(sorted.values().stream()
       .map((s)->"\""+s+"\"")
       .collect(Collectors.joining(", "))

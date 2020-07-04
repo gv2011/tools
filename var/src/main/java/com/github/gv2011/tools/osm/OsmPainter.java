@@ -6,7 +6,6 @@ import static com.github.gv2011.util.ex.Exceptions.call;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -142,7 +141,7 @@ public class OsmPainter implements AutoCloseableNt{
       .map(Attribute::getValue)
       .map(Double::parseDouble)
     ;
-    if(lat.isPresent() && lon.isPresent()){display.node(lon.get(),lat.get());};
+    if(lat.isPresent() && lon.isPresent()){display.node(lon.get(),lat.get());}
     final Element e = new Element(parent, "node", id);
     final Iterator<?> it = node.getAttributes();
     while(it.hasNext()){
@@ -236,7 +235,7 @@ public class OsmPainter implements AutoCloseableNt{
     }
   }
 
-  private String encode(final String str) throws UnsupportedEncodingException {
+  private String encode(final String str) {
 //    return URLEncoder.encode(str, UTF_8.name());
     return str.replace('/', '+');
   }

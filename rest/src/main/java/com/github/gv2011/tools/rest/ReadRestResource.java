@@ -2,7 +2,6 @@ package com.github.gv2011.tools.rest;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-import java.io.IOException;
 import java.net.URI;
 import java.util.Optional;
 
@@ -17,7 +16,7 @@ public class ReadRestResource {
 
   private static final Logger LOG = getLogger(ReadRestResource.class);
 
-  public static void main(final String[] args) throws IOException {
+  public static void main(final String[] args) {
     final SafeProperties config = PropertyUtils.readProperties("config.properties");
     JsonNode node = RestUtils.read(URI.create(config.getProperty("url")));
     final Optional<String> filter = config.tryGet("filter");

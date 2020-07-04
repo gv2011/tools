@@ -2,7 +2,6 @@ package com.github.gv2011.tools.netmon;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.time.Duration;
@@ -12,7 +11,7 @@ public class Main {
 
   private static float flow = 200f * 1E6f / (31*24*60*60); //bytes per second
 
-  public static void main(final String[] args) throws MalformedURLException, IOException {
+  public static void main(final String[] args) {
     final Instant start = Instant.now();
     long total = 0;
     Instant rstart = Instant.now();

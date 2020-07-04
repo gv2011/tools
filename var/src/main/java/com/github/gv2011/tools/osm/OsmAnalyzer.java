@@ -7,7 +7,6 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -212,7 +211,7 @@ public class OsmAnalyzer implements AutoCloseableNt{
     }
   }
 
-  private String encode(final String str) throws UnsupportedEncodingException {
+  private String encode(final String str) {
 //    return URLEncoder.encode(str, UTF_8.name());
     return str.replace('/', '+');
   }
