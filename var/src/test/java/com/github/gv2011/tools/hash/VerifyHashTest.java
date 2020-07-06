@@ -1,7 +1,5 @@
 package com.github.gv2011.tools.hash;
 
-import static org.junit.Assert.*;
-
 import java.util.Locale;
 import java.util.stream.Stream;
 

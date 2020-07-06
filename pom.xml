@@ -1,48 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>parent-gv</artifactId>
-    <groupId>com.github.gv2011</groupId>
-    <version>0.5.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>tools</artifactId>
-  <version>0.5.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Vinz Tools</name>
-  <description>Executable tools.</description>
-  <url>https://github.com/gv2011/util</url>
-  <properties>
-    <util.version>0.5.1-SNAPSHOT</util.version>
-  </properties>
-  <licenses>
-    <license>
-      <name>MIT License</name>
-      <url>https://opensource.org/licenses/MIT</url>
-    </license>
-  </licenses>
-  <inceptionYear>2015</inceptionYear>
-  <developers>
-    <developer>
-      <id>gv2011</id>
-      <name>Vinz</name>
-      <url>https://github.com/gv2011</url>
-    </developer>
-  </developers>
-  <scm>
-    <connection>scm:git:git@github.com:gv2011/tools.git</connection>
-    <developerConnection>scm:git:git@github.com:gv2011/tools.git</developerConnection>
-    <url>https://github.com/gv2011/tools</url>
-    <tag>HEAD</tag>
-  </scm>
-  <modules>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>parent-gv</artifactId>
+		<groupId>com.github.gv2011</groupId>
+		<version>0.5.6</version>
+	</parent>
+	<artifactId>tools</artifactId>
+	<version>0.5.7-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Vinz Tools</name>
+	<description>Executable tools.</description>
+	<url>https://github.com/gv2011/util</url>
+	<properties>
+		<util.version>0.5.6</util.version>
+	</properties>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://opensource.org/licenses/MIT</url>
+		</license>
+	</licenses>
+	<inceptionYear>2015</inceptionYear>
+	<developers>
+		<developer>
+			<id>gv2011</id>
+			<name>Vinz</name>
+			<url>https://github.com/gv2011</url>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git@github.com:gv2011/tools.git</connection>
+		<developerConnection>scm:git:git@github.com:gv2011/tools.git</developerConnection>
+		<url>https://github.com/gv2011/tools</url>
+		<tag>HEAD</tag>
+	</scm>
+	<modules>
     <module>accounting</module>
     <module>backup</module>
-    <module>m2t</module>
-    <module>var</module>
-    <module>rename</module>
-    <module>hookforward</module>
+		<module>git</module>
+		<module>m2t</module>
+		<module>var</module>
+		<module>rename</module>
+		<module>hookforward</module>
     <module>rest</module>
     <module>vcard</module>
-  </modules>
+	</modules>
+	<profiles>
+		<profile>
+			<id>toolchains</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-toolchains-plugin</artifactId>
+						<version>3.0.0</version><!-- TODO -->
+						<configuration>
+							<toolchains>
+								<jdk>
+									<version>${java.release}</version>
+								</jdk>
+							</toolchains>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>toolchain</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 </project>

@@ -15,6 +15,7 @@ import com.github.gv2011.util.icol.IMap;
 
 public class VerifyHash {
 
+  @SuppressWarnings("unused")
   private static final IMap<String,String> ALGORITHMS = ICollections.<String,String>mapBuilder()
     .put("sha256", "SHA-256")
     .build()
@@ -24,6 +25,7 @@ public class VerifyHash {
     final Path file = Paths.get("C:\\Dateien\\Software\\java-13-openjdk-13.0.1.9-1.windows.ojdkbuild.x86_64.zip");
     final Path hashFile = findHashFile(file);
     final String algorithm = getAlgorithmByFileName(hashFile);
+    @SuppressWarnings("unused")
     final MessageDigest md = call(()->MessageDigest.getInstance(algorithm));
     HashUtils.class.arrayType();
   }

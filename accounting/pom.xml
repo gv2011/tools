@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.github.gv2011</groupId>
     <artifactId>tools</artifactId>
-    <version>0.5.1-SNAPSHOT</version>
+    <version>0.5.7-SNAPSHOT</version>
   </parent>
 
   <artifactId>tools-accounting</artifactId>
@@ -22,11 +22,6 @@
       <artifactId>gcol</artifactId>
       <version>${util.version}</version>
       <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-csv</artifactId>
     </dependency>
 
     <dependency>
