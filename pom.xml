@@ -41,12 +41,17 @@
 
   <modules>
     <module>accounting</module>
+    <module>backup</module>
     <module>git</module>
-    <module>m2t</module>
-    <module>var</module>
-    <module>rename</module>
     <module>hookforward</module>
+    <module>m2t</module>
+    <module>mailsorter</module>
+    <module>rename</module>
     <module>rest</module>
+    <module>start</module>
+    <module>tables</module>
+    <module>var</module>
+    <module>vcard</module>
   </modules>
 
   <dependencyManagement>
@@ -77,6 +82,7 @@
         <groupId>com.github.gv2011</groupId>
         <artifactId>util-beans</artifactId>
         <version>${util.version}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.github.gv2011.logback</groupId>
@@ -89,6 +95,12 @@
         <artifactId>logback-classic</artifactId>
         <version>${logback.version}</version>
         <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.gv2011</groupId>
+        <artifactId>testutil</artifactId>
+        <version>${util.version}</version>
+        <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>

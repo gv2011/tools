@@ -31,9 +31,18 @@
       <artifactId>h2</artifactId>
     </dependency>
     <dependency>
+      <groupId>com.fazecast</groupId>
+      <artifactId>jSerialComm</artifactId>
+    </dependency>
+    <dependency>
       <groupId>com.github.gv2011.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm.icu</groupId>
+      <artifactId>icu4j</artifactId>
     </dependency>
 
     <dependency>
@@ -74,7 +83,6 @@
     <dependency>
       <groupId>com.github.gv2011</groupId>
       <artifactId>testutil</artifactId>
-      <version>${util.version}</version>
       <scope>test</scope>
     </dependency>
 
