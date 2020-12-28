@@ -7,14 +7,49 @@
     <version>0.5.7-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.github.gv2011.m2t</groupId>
-  <artifactId>m2t-parent</artifactId>
+  <artifactId>m2timp</artifactId>
 
-  <packaging>pom</packaging>
-
-  <modules>
-    <module>api</module>
-    <module>imp</module>
-  </modules>
+  <dependencies>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-apis</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.shared</groupId>
+      <artifactId>maven-invoker</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.shared</groupId>
+      <artifactId>maven-shared-utils</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>gcol</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-beans</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>jsong</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>testutil</artifactId>
+      <version>${util.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-daemon</groupId>
+      <artifactId>commons-daemon</artifactId>
+      <classifier>bin-windows</classifier>
+      <type>zip</type>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
 </project>

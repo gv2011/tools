@@ -1,35 +1,35 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.github.gv2011</groupId>
-		<artifactId>tools</artifactId>
-		<version>0.5.7-SNAPSHOT</version>
-	</parent>
+  <parent>
+    <groupId>com.github.gv2011</groupId>
+    <artifactId>tools</artifactId>
+    <version>0.5.7-SNAPSHOT</version>
+  </parent>
 
-	<artifactId>tools-hook</artifactId>
-	<packaging>war</packaging>
+  <artifactId>tools-hook</artifactId>
+  <packaging>war</packaging>
 
-	<description>Forward github hook requests to a different service</description>
+  <description>Forward github hook requests to a different service</description>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.github.gv2011</groupId>
-			<artifactId>util</artifactId>
-			<version>${util.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
-	<!-- <build> -->
-	<!-- <plugins> -->
-	<!-- <plugin> -->
-	<!-- <groupId>org.mortbay.jetty</groupId> -->
-	<!-- <artifactId>maven-jetty-plugin</artifactId> -->
-	<!-- </plugin> -->
-	<!-- </plugins> -->
-	<!-- </build> -->
+  <dependencies>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-apis</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.toolchain</groupId>
+      <artifactId>jetty-jakarta-servlet-api</artifactId>
+    </dependency>
+  </dependencies>
+  <!-- <build> -->
+  <!-- <plugins> -->
+  <!-- <plugin> -->
+  <!-- <groupId>org.mortbay.jetty</groupId> -->
+  <!-- <artifactId>maven-jetty-plugin</artifactId> -->
+  <!-- </plugin> -->
+  <!-- </plugins> -->
+  <!-- </build> -->
 </project>

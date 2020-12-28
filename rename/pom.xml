@@ -1,81 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.github.gv2011</groupId>
-		<artifactId>tools</artifactId>
-		<version>0.5.7-SNAPSHOT</version>
-	</parent>
+  <parent>
+    <groupId>com.github.gv2011</groupId>
+    <artifactId>tools</artifactId>
+    <version>0.5.7-SNAPSHOT</version>
+  </parent>
 
-	<artifactId>tools-rename</artifactId>
+  <artifactId>tools-rename</artifactId>
 
-	<description>Tool to rename multiple files in a folder</description>
+  <description>Tool to rename multiple files in a folder</description>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.github.gv2011</groupId>
-			<artifactId>util</artifactId>
-      <version>${util.version}</version>
-		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.commons</groupId> -->
-<!-- 			<artifactId>commons-compress</artifactId> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.h2database</groupId> -->
-<!-- 			<artifactId>h2</artifactId> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>ch.qos.logback</groupId> -->
-<!-- 			<artifactId>logback-classic</artifactId> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>ch.qos.logback</groupId> -->
-<!-- 			<artifactId>logback-classic</artifactId> -->
-<!-- 			<scope>runtime</scope> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.commons</groupId> -->
-<!-- 			<artifactId>commons-csv</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.httpcomponents</groupId> -->
-<!-- 			<artifactId>httpclient</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.sun.mail</groupId> -->
-<!-- 			<artifactId>javax.mail</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.sun.mail</groupId> -->
-<!-- 			<artifactId>imap</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.github.lookfirst</groupId> -->
-<!-- 			<artifactId>sardine</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.googlecode.ez-vcard</groupId> -->
-<!-- 			<artifactId>ez-vcard</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.derby</groupId> -->
-<!-- 			<artifactId>derby</artifactId> -->
-<!-- 		</dependency> -->
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.apache.poi</groupId> -->
-<!-- 			<artifactId>poi</artifactId> -->
-<!-- 		</dependency> -->
-
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-apis</artifactId>
+    </dependency>
+  </dependencies>
 
 </project>
