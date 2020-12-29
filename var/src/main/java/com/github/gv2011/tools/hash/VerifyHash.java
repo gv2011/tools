@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 import java.security.MessageDigest;
 
 import com.github.gv2011.util.FileUtils;
-import com.github.gv2011.util.HashUtils;
 import com.github.gv2011.util.icol.ICollections;
 import com.github.gv2011.util.icol.IMap;
 
@@ -27,7 +26,6 @@ public class VerifyHash {
     final String algorithm = getAlgorithmByFileName(hashFile);
     @SuppressWarnings("unused")
     final MessageDigest md = call(()->MessageDigest.getInstance(algorithm));
-    HashUtils.class.arrayType();
   }
 
   private static String getAlgorithmByFileName(final Path file) {
