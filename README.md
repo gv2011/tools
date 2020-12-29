@@ -1,4 +1,4 @@
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.gv2011/tools.svg)](https://search.maven.org/#search|ga|1|g%3A%22com.github.gv2011%22%20AND%20a%3A%22tools%22)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.gv2011/tools.svg)](https://repo1.maven.org/maven2/com/github/gv2011/tools/)
 [![Build Status](https://travis-ci.org/gv2011/tools.svg?branch=dev)](https://travis-ci.org/gv2011/tools)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
