@@ -19,7 +19,7 @@ public class MailSorter {
 		props.setProperty("mail.store.protocol", "imaps");
 		Session session = Session.getDefaultInstance(props, null);
 		try(Store store = session.getStore("imaps")){
-			store.connect("mail.special-host.de", "test@iglhaut.com", "OjRg62ruIlqrG5j24x6c");
+			store.connect(args[0], args[1], args[2]);
 
 			IMAPFolder root = (IMAPFolder) store.getDefaultFolder();
 			
