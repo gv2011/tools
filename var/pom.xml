@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -17,10 +19,6 @@
       <artifactId>util-apis</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.github.gv2011</groupId>
-      <artifactId>gcol</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-compress</artifactId>
     </dependency>
@@ -31,11 +29,6 @@
     <dependency>
       <groupId>com.fazecast</groupId>
       <artifactId>jSerialComm</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.gv2011.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <scope>runtime</scope>
     </dependency>
 
     <dependency>
@@ -53,10 +46,10 @@
       <artifactId>httpclient</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>jakarta.mail</groupId>
-      <artifactId>jakarta.mail-api</artifactId>
-    </dependency>
+    <!-- <dependency> -->
+    <!-- <groupId>jakarta.mail</groupId> -->
+    <!-- <artifactId>jakarta.mail-api</artifactId> -->
+    <!-- </dependency> -->
 
     <dependency>
       <groupId>com.github.lookfirst</groupId>
@@ -77,6 +70,34 @@
       <groupId>org.apache.poi</groupId>
       <artifactId>poi</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-gcol</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-beans</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-json</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>gsoncore</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+
 
     <dependency>
       <groupId>com.github.gv2011</groupId>

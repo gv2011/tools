@@ -16,7 +16,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.gv2011</groupId>
-      <artifactId>gcol</artifactId>
+      <artifactId>util-gcol</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
@@ -25,7 +25,12 @@
     </dependency>
     <dependency>
       <groupId>com.github.gv2011</groupId>
-      <artifactId>jsong</artifactId>
+      <artifactId>util-json</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>gsoncore</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>

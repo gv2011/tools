@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 
 import com.github.gv2011.util.PropertyUtils;
 import com.github.gv2011.util.PropertyUtils.SafeProperties;
-import com.github.gv2011.util.http.RestUtils;
+import com.github.gv2011.util.http.HttpUtils;
 import com.github.gv2011.util.json.JsonNode;
 
 public class ReadRestResource {
@@ -18,7 +18,7 @@ public class ReadRestResource {
 
   public static void main(final String[] args) {
     final SafeProperties config = PropertyUtils.readProperties("config.properties");
-    JsonNode node = RestUtils.read(URI.create(config.getProperty("url")));
+    JsonNode node = HttpUtils.read(URI.create(config.getProperty("url")));
     final Optional<String> filter = config.tryGet("filter");
     if(filter.isPresent()) {
       node = node.filter(filter.get());

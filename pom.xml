@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.github.gv2011</groupId>
     <artifactId>parent-gv</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
   </parent>
   
   <artifactId>tools</artifactId>
@@ -14,9 +14,10 @@
   <url>https://github.com/gv2011/tools</url>
   
   <properties>
-    <util-apis.version>0.8</util-apis.version>
-    <logback.version>1.3.3</logback.version>
-    <util.version>0.8</util.version>
+    <util-apis.version>0.9</util-apis.version>
+    <logback.version>1.3.4</logback.version>
+    <util.version>0.9</util.version>
+    <gsoncore.version>0.9</gsoncore.version>
   </properties>
   
   <licenses>
@@ -73,19 +74,25 @@
       </dependency>
       <dependency>
         <groupId>com.github.gv2011</groupId>
-        <artifactId>jsong</artifactId>
+        <artifactId>util-json</artifactId>
         <version>${util.version}</version>
         <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.github.gv2011</groupId>
-        <artifactId>gcol</artifactId>
+        <artifactId>gsoncore</artifactId>
+        <version>${gsoncore.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.gv2011</groupId>
+        <artifactId>util-gcol</artifactId>
         <version>${util.version}</version>
         <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.github.gv2011</groupId>
-        <artifactId>http</artifactId>
+        <artifactId>util-http</artifactId>
         <version>${util.version}</version>
       </dependency>
       <dependency>
