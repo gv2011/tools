@@ -63,6 +63,7 @@
     <module>rest</module>
     <module>start</module>
     <module>tables</module>
+    <module>textconv</module>
     <module>var</module>
     <module>vcard</module>
   </modules>
