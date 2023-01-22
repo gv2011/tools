@@ -113,7 +113,7 @@ final class M2tImp implements M2t{
   }
 
   @Override
-  public ISortedSet<Path> getClasspath(Bytes pom, Scope scope) {
+  public ISortedSet<Path> getClasspath(final Bytes pom, final Scope scope) {
     return getClasspathFromPom(createTmpDirectoryFromPom(pom), scope);
   }
 
@@ -193,6 +193,8 @@ private ISortedSet<Path> getClasspathFromPom(final Path dir, final Scope scope) 
     request.setBatchMode(true);
     final Invoker invoker = new DefaultInvoker();
     final AtomicBoolean producedErrorLines = new AtomicBoolean();
+    //invoker.setMavenHome(new File("/usr/share/maven")); TODO
+    invoker.setMavenHome(new File("mavenHome"));
     invoker.setErrorHandler(errorLine->{
       producedErrorLines.set(true);
       LOG.error("Maven Error: {}", errorLine);
@@ -202,7 +204,7 @@ private ISortedSet<Path> getClasspathFromPom(final Path dir, final Scope scope) 
       outListener.accept(line);
     });
     final InvocationResult result = call(()->invoker.execute(request));
-    Opt.ofNullable(result.getExecutionException()).ifPresent(ex->{throw wrap(ex);});
+    Opt.ofNullable(result.getExecutionException()).ifPresentDo(ex->{throw wrap(ex);});
     verifyEqual(result.getExitCode(), 0);
     verifyEqual(producedErrorLines.get(), false);
   }
@@ -229,7 +231,7 @@ private ISortedSet<Path> getClasspathFromPom(final Path dir, final Scope scope) 
     return dir;
   }
 
-  private Path createTmpDirectoryFromPom(Bytes pom) {
+  private Path createTmpDirectoryFromPom(final Bytes pom) {
     final Path dir = call(()->Files.createTempDirectory(M2tImp.class.getSimpleName()).toRealPath());
 
     final Path pomCopy = dir.resolve("pom.xml");

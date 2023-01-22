@@ -30,10 +30,13 @@ public class Main {
 	      ()->FileUtils.getReaderRemoveBom(file),
 	      r->{
 	        final CSVFormat format =
-	          CSVFormat.RFC4180.withDelimiter(';')
-	          .withQuote('"')
-	          .withFirstRecordAsHeader()
-	          .withRecordSeparator("\r\n")
+	          CSVFormat.RFC4180.builder()
+	          .setDelimiter(';')
+	          .setQuote('"')
+	          .setHeader()
+	          .setSkipHeaderRecord(true)
+	          .setRecordSeparator("\r\n")
+	          .build()
 	        ;
 	        try(CSVParser p = new CSVParser(r, format)){
 	          for(final CSVRecord record: p){
