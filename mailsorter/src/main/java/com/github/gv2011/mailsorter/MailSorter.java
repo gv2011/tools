@@ -3,8 +3,8 @@ package com.github.gv2011.mailsorter;
 import java.util.Arrays;
 import java.util.Properties;
 
-import com.sun.mail.imap.IMAPFolder;
-import com.sun.mail.imap.IMAPMessage;
+import org.eclipse.angus.mail.imap.IMAPFolder;
+import org.eclipse.angus.mail.imap.IMAPMessage;
 
 import jakarta.mail.Folder;
 import jakarta.mail.MessagingException;
@@ -14,15 +14,15 @@ import jakarta.mail.internet.InternetAddress;
 
 public class MailSorter {
 
-	public static void main(String[] args) throws MessagingException {
-		Properties props = new Properties();
+	public static void main(final String[] args) throws MessagingException {
+		final Properties props = new Properties();
 		props.setProperty("mail.store.protocol", "imaps");
-		Session session = Session.getDefaultInstance(props, null);
+		final Session session = Session.getDefaultInstance(props, null);
 		try(Store store = session.getStore("imaps")){
 			store.connect(args[0], args[1], args[2]);
 
-			IMAPFolder root = (IMAPFolder) store.getDefaultFolder();
-			
+			final IMAPFolder root = (IMAPFolder) store.getDefaultFolder();
+
 			System.out.println(root.getName());
 			Arrays.stream(root.list()).forEach(System.out::println);
 			try(final IMAPFolder inbox = (IMAPFolder) root.getFolder("INBOX")){
@@ -31,7 +31,7 @@ public class MailSorter {
 				final IMAPMessage msg = (IMAPMessage) inbox.getMessage(1);
 				System.out.println(msg.getSubject());
 				Arrays.stream(msg.getFrom()).forEach(a->System.out.println(((InternetAddress)a).getAddress()));
-				
+
 //				msg.writeTo(System.out);
 //				inbox.moveMessages(new Message[]{msg}, root.getFolder("test1"));
 			}

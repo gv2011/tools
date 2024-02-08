@@ -10,7 +10,13 @@ public class Main {
 
   public static void main(final String[] args) {
     final CountDownLatch countDownLatch = new CountDownLatch(1);
-    try(TextconvGui gui = TextconvGui.create(countDownLatch::countDown, new M2CoordinatesParser()::parse)){
+    try(
+      TextconvGui gui = TextconvGui.create(
+        countDownLatch::countDown,
+//        new M2CoordinatesParser()::parse
+        new DateConverter()::convert
+      )
+    ){
       call(()->countDownLatch.await());
     }
   }

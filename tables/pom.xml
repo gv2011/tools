@@ -34,7 +34,7 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.gv2011.logback</groupId>
+      <groupId>com.github.gv2011</groupId>
       <artifactId>logback-adapter</artifactId>
       <scope>runtime</scope>
     </dependency>
@@ -42,6 +42,12 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-csv</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.github.miachm.sods</groupId>
+      <artifactId>SODS</artifactId>
+      <version>1.5.4</version>
     </dependency>
   </dependencies>
 

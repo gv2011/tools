@@ -195,11 +195,11 @@ private ISortedSet<Path> getClasspathFromPom(final Path dir, final Scope scope) 
     final AtomicBoolean producedErrorLines = new AtomicBoolean();
     //invoker.setMavenHome(new File("/usr/share/maven")); TODO
     invoker.setMavenHome(new File("mavenHome"));
-    invoker.setErrorHandler(errorLine->{
+    request.setErrorHandler(errorLine->{
       producedErrorLines.set(true);
       LOG.error("Maven Error: {}", errorLine);
     });
-    invoker.setOutputHandler(line->{
+    request.setOutputHandler(line->{
       LOG.debug("Maven out: {}", line);
       outListener.accept(line);
     });
