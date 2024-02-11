@@ -1,0 +1,60 @@
+2024-02-11T12:14:46.710Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T12:14:46.713Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T12:14:46.728Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T12:14:46.781Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T12:14:46.782Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T12:14:46.782Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T12:16:21.254Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T12:16:21.257Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T12:16:21.274Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T12:16:21.364Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T12:16:21.364Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T12:16:21.364Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T12:17:32.182Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T12:17:32.186Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T12:17:32.205Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T12:17:32.280Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T12:17:32.281Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T12:17:32.281Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T12:19:21.050Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T12:19:21.053Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T12:19:21.067Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T12:19:21.141Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T12:19:21.142Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T12:19:21.142Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T15:50:21.979Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T15:50:21.991Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T15:50:22.007Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T15:50:22.094Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T15:50:22.094Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T15:50:22.095Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T15:57:33.226Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T15:57:33.237Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T15:57:33.251Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T15:57:33.344Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T15:57:33.345Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T15:57:33.346Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T16:01:00.591Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T16:01:00.601Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T16:01:00.614Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T16:01:00.709Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T16:01:00.710Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T16:01:00.711Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T16:03:51.125Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T16:03:51.136Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T16:03:51.149Z INFO  [main] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T16:03:51.233Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T16:03:51.234Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T16:03:51.234Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T16:09:14.441Z INFO  [ForkJoinPool.commonPool-worker-1] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T16:09:14.451Z INFO  [ForkJoinPool.commonPool-worker-1] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T16:09:14.463Z INFO  [ForkJoinPool.commonPool-worker-1] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T16:09:14.551Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T16:09:14.552Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T16:09:14.553Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.
+2024-02-11T16:37:52.220Z INFO  [ForkJoinPool.commonPool-worker-1] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.Adapter - implementation class: com.github.gv2011.gsoncore.GsoncoreAdapter.
+2024-02-11T16:37:52.231Z INFO  [ForkJoinPool.commonPool-worker-1] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.json.JsonFactory - implementation class: com.github.gv2011.util.json.imp.JsonFactoryImp.
+2024-02-11T16:37:52.248Z INFO  [ForkJoinPool.commonPool-worker-1] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Loaded service com.github.gv2011.util.beans.TypeRegistry - implementation class: com.github.gv2011.util.beans.imp.DefaultTypeRegistry.
+2024-02-11T16:37:52.335Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing.
+2024-02-11T16:37:52.335Z WARN  [RecursiveServiceLoader-shutdown] com.github.gv2011.util.serviceloader.RecursiveServiceLoader - Closing logging as last action - goodbye.
+2024-02-11T16:37:52.336Z INFO  [RecursiveServiceLoader-shutdown] com.github.gv2011.logbackadapter.LogbackLogAdapter - Stopping Logback.

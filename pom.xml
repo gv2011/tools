@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.github.gv2011</groupId>
     <artifactId>parent-gv</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
   </parent>
 
   <artifactId>tools</artifactId>
@@ -15,10 +15,10 @@
   <url>https://github.com/gv2011/tools</url>
 
   <properties>
-    <gsoncore.version>0.12</gsoncore.version>
-    <util-apis.version>0.12</util-apis.version>
-    <logback.version>1.3.7</logback.version>
-    <util.version>0.12</util.version>
+    <gsoncore.version>0.13</gsoncore.version>
+    <util-apis.version>0.13-SNAPSHOT</util-apis.version>
+    <logback.version>1.3.8-SNAPSHOT</logback.version>
+    <util.version>0.13-SNAPSHOT</util.version>
   </properties>
 
   <licenses>
@@ -58,6 +58,7 @@
     <module>git</module>
     <module>m2t</module>
     <module>mailsorter</module>
+    <module>misc</module>
     <module>rename</module>
     <module>rest</module>
     <module>start</module>
@@ -112,6 +113,12 @@
       <dependency>
         <groupId>com.github.gv2011</groupId>
         <artifactId>testutil</artifactId>
+        <version>${util.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.gv2011</groupId>
+        <artifactId>testutil5</artifactId>
         <version>${util.version}</version>
         <scope>test</scope>
       </dependency>

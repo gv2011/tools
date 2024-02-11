@@ -62,12 +62,16 @@ final class M2tImp implements M2t{
   }
 
   @Override
+  public ArtifactRef parse(final String encoded) {
+    return M2tFactoryImp.parseArtifactRef(encoded);
+  }
+
+  @Override
   public Path resolve(final ArtifactRef artifact) {
     return
       lock.apply(artifact, a->tryGet(cache, artifact))
       .orElseGet(()->{
         final Path dir = createTmpDirectoryWithFakePom(artifact);
-
         final InvocationRequest listDependency = new DefaultInvocationRequest();
         listDependency.setBaseDirectory(dir.toFile());
         listDependency.setGoals(listOf("dependency:list"));
@@ -91,13 +95,17 @@ final class M2tImp implements M2t{
             return found;
           })
           .map(l->removePrefix(l, prefix))
+          .map(l->{
+            final int modStart = l.indexOf(" -- module ");
+            return modStart==-1 ? l : l.substring(0, modStart);
+          })
           .collect(toSingle())
         ;
         String fileStr;
         if(line.startsWith("compile:")) fileStr = removePrefix(line, "compile:");
         else fileStr = removePrefix(line, "runtime:");
         final Path result = Paths.get(fileStr);
-        verify(Files.isRegularFile(result));
+        verify(result, Files::isRegularFile);
         FileUtils.deleteFile(out);
         FileUtils.deleteFile(dir.resolve("pom.xml"));
         call(()->dir.toFile().delete());
@@ -193,8 +201,8 @@ private ISortedSet<Path> getClasspathFromPom(final Path dir, final Scope scope) 
     request.setBatchMode(true);
     final Invoker invoker = new DefaultInvoker();
     final AtomicBoolean producedErrorLines = new AtomicBoolean();
-    //invoker.setMavenHome(new File("/usr/share/maven")); TODO
-    invoker.setMavenHome(new File("mavenHome"));
+    invoker.setMavenHome(new File("/install/apache-maven-3.9.6")); //TODO
+    //invoker.setMavenHome(new File("mavenHome"));
     request.setErrorHandler(errorLine->{
       producedErrorLines.set(true);
       LOG.error("Maven Error: {}", errorLine);
