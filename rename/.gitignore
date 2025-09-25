@@ -2,3 +2,5 @@
 /.project
 /target/
 /.classpath
+/add-infix.json
+/log/

@@ -4,28 +4,21 @@ import com.github.gv2011.util.icol.AbstractCachedIList;
 
 public class AccountingList extends AbstractCachedIList<AccountingEntry>{
 
-  private final AccountingEntry root;
-  private final int size;
+  private final AccountingEntry last;
 
-  public AccountingList(AccountingEntry root) {
-    this.root = root;
-    int count = 1;
-    while(root.successor().isPresent()){
-      root = root.successor().get();
-      count++;
-    }
-    size = count;
+  public AccountingList(AccountingEntry last) {
+    this.last = last;
   }
 
   @Override
   public int size() {
-    return size;
+    return last.index()+1;
   }
 
   @Override
   public AccountingEntry get(final int index) {
-    AccountingEntry e = root;
-    for(int i=0; i<index; i++) e = e.successor().get();
+    AccountingEntry e = last;
+    while(e.index()!=index) e = e.previous().get();
     return e;
   }
 

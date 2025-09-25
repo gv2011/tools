@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
+
   <parent>
     <groupId>com.github.gv2011</groupId>
     <artifactId>parent-gv</artifactId>
-    <version>1.6</version>
+    <version>1.8-SNAPSHOT</version>
   </parent>
 
   <artifactId>tools</artifactId>
@@ -15,10 +15,10 @@
   <url>https://github.com/gv2011/tools</url>
 
   <properties>
-    <gsoncore.version>0.13</gsoncore.version>
-    <util-apis.version>0.13-SNAPSHOT</util-apis.version>
-    <logback.version>1.3.8-SNAPSHOT</logback.version>
-    <util.version>0.13-SNAPSHOT</util.version>
+    <gsoncore.version>0.14</gsoncore.version>
+    <util-apis.version>0.15-SNAPSHOT</util-apis.version>
+    <logback-adapter.version>1.4.14</logback-adapter.version>
+    <util.version>0.15-SNAPSHOT</util.version>
   </properties>
 
   <licenses>
@@ -28,7 +28,7 @@
       <comments>
         The license applies to this Maven artifact, its modules and other content within the GIT repository
         specified in the scm section of this file.
-        The copyright years are given by the inceptionYear tag within this file and by the history of the 
+        The copyright years are given by the inceptionYear tag within this file and by the history of the
         GIT repository.
       </comments>
     </license>
@@ -53,12 +53,10 @@
 
   <modules>
     <module>accounting</module>
-    <module>backup</module>
     <module>dev</module>
     <module>git</module>
     <module>m2t</module>
     <module>mailsorter</module>
-    <module>misc</module>
     <module>rename</module>
     <module>rest</module>
     <module>start</module>
@@ -94,6 +92,18 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
+      <groupId>com.github.gv2011</groupId>
+        <artifactId>jsong</artifactId>
+        <version>${util.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.gv2011</groupId>
+        <artifactId>util-csv</artifactId>
+        <version>${util.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
         <groupId>com.github.gv2011</groupId>
         <artifactId>util-http</artifactId>
         <version>${util.version}</version>
@@ -106,8 +116,20 @@
       </dependency>
       <dependency>
         <groupId>com.github.gv2011</groupId>
+        <artifactId>util-tika</artifactId>
+        <version>${util.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.gv2011</groupId>
+        <artifactId>util-swing</artifactId>
+        <version>${util.version}</version>
+        <scope>runtime</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.github.gv2011</groupId>
         <artifactId>logback-adapter</artifactId>
-        <version>${logback.version}</version>
+        <version>${logback-adapter.version}</version>
         <scope>runtime</scope>
       </dependency>
       <dependency>

@@ -59,7 +59,7 @@ public class M2CoordinatesParser {
   }
 
   private Optional<Node> getChild(final Element element, final String m2Name) {
-    return DomUtils.stream(element.getChildNodes())
+    return DomUtils.childNodes(element)
       .filter(n->n.getNodeType()==Node.ELEMENT_NODE)
       .filter(n->n.getNodeName().equals(m2Name))
       .findFirst()
@@ -71,7 +71,7 @@ public class M2CoordinatesParser {
   }
 
   private boolean hasArtifact(final Element element) {
-    return DomUtils.stream(element.getChildNodes())
+    return DomUtils.childNodes(element)
       .filter(n->n.getNodeType()==Node.ELEMENT_NODE)
       .anyMatch(n->n.getNodeName().equals(ArtifactId.M2_NAME))
     ;

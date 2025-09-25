@@ -57,6 +57,10 @@ public class Amount extends AbstractTypedString<Amount>{
     return new Amount(cents - amount.cents);
   }
 
+  public Amount add(final Amount amount) {
+    return new Amount(cents + amount.cents);
+  }
+
   public Amount negate() {
     return new Amount(-cents);
   }

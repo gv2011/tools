@@ -8,12 +8,12 @@ import static com.github.gv2011.util.ex.Exceptions.call;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashSet;
-import java.util.Optional;
 import java.util.Set;
 
 import com.github.gv2011.util.AutoCloseableNt;
 import com.github.gv2011.util.bytes.ByteUtils;
 import com.github.gv2011.util.bytes.Hash256;
+import com.github.gv2011.util.icol.Opt;
 
 public class FileIndex {
 
@@ -27,31 +27,31 @@ public class FileIndex {
     this.baseDir = baseDir;
   }
 
-  public Optional<String> put(final String opaqueKey, final String value){
+  public Opt<String> put(final String opaqueKey, final String value){
     final Hash256 hash = ByteUtils.hash(opaqueKey);
     final Path path = getPath(hash);
     try(AutoCloseableNt lock = getLock(path)){
-      final Optional<String> result = tryReadText(path);
+      final Opt<String> result = tryReadText(path);
       call(()->Files.createDirectories(path.getParent()));
       writeText(value, path);
       return result;
     }
   }
 
-  public Optional<String> get(final String opaqueKey){
+  public Opt<String> get(final String opaqueKey){
     final Hash256 hash = ByteUtils.hash(opaqueKey);
     final Path path = getPath(hash);
     try(AutoCloseableNt lock = getLock(path)){
-      final Optional<String> result = tryReadText(path);
+      final Opt<String> result = tryReadText(path);
       return result;
     }
   }
 
-  public Optional<String> remove(final String opaqueKey){
+  public Opt<String> remove(final String opaqueKey){
     final Hash256 hash = ByteUtils.hash(opaqueKey);
     final Path path = getPath(hash);
     try(AutoCloseableNt lock = getLock(path)){
-      final Optional<String> result = tryReadText(path);
+      final Opt<String> result = tryReadText(path);
       if(result.isPresent()) delete(path);
       return result;
     }

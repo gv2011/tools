@@ -52,6 +52,12 @@
     <dependency>
       <groupId>com.github.lookfirst</groupId>
       <artifactId>sardine</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-simple</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
@@ -87,6 +93,11 @@
     <dependency>
       <groupId>com.github.gv2011</groupId>
       <artifactId>gsoncore</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gv2011</groupId>
+      <artifactId>util-tika</artifactId>
       <scope>runtime</scope>
     </dependency>
     <dependency>
