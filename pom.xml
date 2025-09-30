@@ -15,11 +15,10 @@
   <url>https://github.com/gv2011/tools</url>
 
   <properties>
-    <java.release>17</java.release>
     <gsoncore.version>0.15.1</gsoncore.version>
     <util-apis.version>0.15.1</util-apis.version>
     <logback-adapter.version>1.5.18.2</logback-adapter.version>
-    <util.version>0.17</util.version>
+    <util.version>0.25</util.version>
   </properties>
 
   <licenses>
