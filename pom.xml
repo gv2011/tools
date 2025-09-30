@@ -9,7 +9,7 @@
   </parent>
 
   <artifactId>tools</artifactId>
-  <version>0.13.2-SNAPSHOT</version>
+  <version>0.17</version>
   <packaging>pom</packaging>
   <name>Vinz Tools</name>
   <url>https://github.com/gv2011/tools</url>
@@ -49,7 +49,7 @@
     <connection>scm:git:git@github.com:gv2011/tools.git</connection>
     <developerConnection>scm:git:git@github.com:gv2011/tools.git</developerConnection>
     <url>https://github.com/gv2011/tools</url>
-    <tag>HEAD</tag>
+    <tag>tools-0.17</tag>
   </scm>
 
   <modules>
