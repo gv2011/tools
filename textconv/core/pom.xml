@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-textconv-core</artifactId>
+  <name>tools-textconv-core</name>
 
   <dependencies>
     <dependency>

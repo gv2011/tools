@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-vcard</artifactId>
+  <name>tools-vcard</name>
 
   <dependencies>
     <dependency>

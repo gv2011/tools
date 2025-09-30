@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-tables</artifactId>
+  <name>tools-tables</name>
 
   <dependencies>
     <dependency>

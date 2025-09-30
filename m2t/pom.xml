@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-m2t</artifactId>
+  <name>tools-m2t</name>
 
   <dependencies>
     <dependency>

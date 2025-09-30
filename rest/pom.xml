@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-rest</artifactId>
+  <name>tools-rest</name>
 
   <description>Tool to access REST resources</description>
 

@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-start</artifactId>
+  <name>tools-start</name>
 
   <dependencies>
     <dependency>

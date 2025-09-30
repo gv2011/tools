@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>tools-accounting</artifactId>
-
+  <name>tools-accounting</name>
   <description>Accounting Helper</description>
 
   <dependencies>

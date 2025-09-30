@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-textconv-gui</artifactId>
+  <name>tools-textconv-gui</artifactId>
 
   <dependencies>
     <dependency>

@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-textconv</artifactId>
+  <name>tools-textconv</name>
   <packaging>pom</packaging>
 
   <modules>

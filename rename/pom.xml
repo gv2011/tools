@@ -10,6 +10,7 @@
   </parent>
 
   <artifactId>tools-rename</artifactId>
+  <name>tools-rename</name>
 
   <description>Tool to rename multiple files in a folder</description>
 

@@ -8,6 +8,7 @@
   </parent>
 
   <artifactId>tools-git</artifactId>
+  <name>tools-git</name>
 
   <dependencies>
     <dependency>
